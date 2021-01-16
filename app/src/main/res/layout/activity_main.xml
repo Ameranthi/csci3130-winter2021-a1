@@ -10,48 +10,65 @@
         android:id="@+id/textView"
         android:layout_width="270dp"
         android:layout_height="45dp"
+        android:layout_marginTop="184dp"
         android:text="Type in a number and hit submit to get the square of the number"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198" />
-
-    <EditText
-        android:id="@+id/numberEditField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginLeft="116dp"
-        android:layout_marginTop="117dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginRight="85dp"
-        android:layout_marginBottom="18dp"
-        android:ems="10"
-        android:inputType="number|textPersonName"
-        android:text="Input Number"
-        app:layout_constraintBottom_toTopOf="@+id/squareButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/squareButton"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="165dp"
-        android:layout_marginLeft="165dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginLeft="161dp"
         android:layout_marginTop="18dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginRight="159dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginRight="162dp"
         android:layout_marginBottom="306dp"
-        android:onClick="@string"
+        android:autoText="false"
+        android:numeric="integer|decimal"
         android:text="Submit"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberEditField"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="197dp"
+        android:layout_height="133dp"
+        android:text="result:"
+        android:textSize="52sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberEditField" />
+        app:layout_constraintTop_toBottomOf="@+id/squareButton"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <EditText
+        android:id="@+id/numberEditField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginLeft="101dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginRight="101dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:hint="Input number here"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/squareButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
